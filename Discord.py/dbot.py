@@ -22,6 +22,7 @@ async def on_ready():
 @bot.command()
 async def nathan(ctx, message: int):
     try:
+        # a lot of this code can be cut out; since this was my first time working with discord.py in this context, it helped for readability for me.
         msg_obj = await ctx.fetch_message(message)
         msg = msg_obj.content
         mention = msg_obj.author.mention
